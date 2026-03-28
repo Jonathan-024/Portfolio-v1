@@ -206,12 +206,46 @@ main .contact__form button:hover {
 
 footer {
   margin-top: 3rem;
-  background-color: var(--surface);
+  background-color: #0d122a;
 }
 footer .footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: auto;
-  padding: 0.5rem 0;
+  padding: 2rem 0;
   width: clamp(630px, 100vw, 630px);
-  font-size: 0.9rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .footer__container .social__icons {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+footer .footer__container .social__icons--link {
+  color: #ced5ff;
+  font-size: 1rem;
+  text-decoration: none;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+footer .footer__container .social__icons--link:hover {
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
+}
+footer .footer__copy {
+  margin: auto;
+  padding: 1px 0;
+  font-size: 0.7rem;
   text-align: center;
+  background-color: rgb(10.5890909091, 14.6618181818, 34.2109090909);
 }/*# sourceMappingURL=main.css.map */

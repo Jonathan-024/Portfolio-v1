@@ -12,6 +12,10 @@ $font-main: 'Poppins', sans-serif;
   }
 }
 
+@mixin dark-surface($color, $darken-percen: 1%) {
+  background-color: darken($color, $darken-percen);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -206,13 +210,38 @@ main {
 // Footer
 footer {
   margin-top: 3rem;
-  background-color: var(--surface);
+  background-color: $surface;
 
   .footer__container {
+    display: flex;
     margin: auto;
-    padding: 0.5rem 0;
+    padding: 2rem 0;
     width: clamp(630px, 100vw, 630px);
-    font-size: 0.9rem;
+    align-items: center;
+    justify-content: space-between;
+
+    .social__icons {
+      cursor: pointer;
+      display: flex;
+      gap: 10px;
+      &--link {
+        color: $text-color;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: transform 0.5s;
+        &:hover {
+          transform: scale(1.12);
+        }
+      }
+    }
+  }
+
+  .footer__copy {
+    margin: auto;
+    padding: 1px 0;
+    font-size: 0.7rem;
     text-align: center;
+
+    @include dark-surface($surface, 2%);
   }
 }
