@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    
+    <script defer src="js/main.js"></script>
+    <script defer src="js/form.js"></script>
   </head>
 
   <body>
@@ -70,12 +73,14 @@
 
       <section id="contact" class="section__contact">
         <h2 class="section__title">Contact</h2>
-        <form action="GET" method="POST" class="contact__form">
+        <form id="contact__form" action="https://formspree.io/f/meoknyar" method="POST" class="contact__form">
           <input type="text" name="name" placeholder="Votre nom" data-lang-placeholder="name" required />
           <input type="email" name="email" placeholder="Votre email" data-lang-placeholder="email" required />
           <textarea name="message" placeholder="Votre message" data-lang-placeholder="message" required></textarea>
           <button type="submit" data-lang="send">Envoyer</button>
         </form>
+
+        <p id="form__message" class="form__message">Salut !</p>
       </section>
     </main>
 
