@@ -1,0 +1,218 @@
+$bg: #0a0e1f;
+$surface: #0d122a;
+$text-color: #ced5ff;
+$primary: #0a66c2;
+$hover-color: #a4b0ff;
+$hover-dark-color: #0c143d;
+$font-main: 'Poppins', sans-serif;
+
+@mixin dark-hover-color($color, $hover-darken: 10%) {
+  &:hover {
+    background-color: darken($color, $hover-darken);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $bg;
+  font-family: $font-main;
+  color: $text-color;
+}
+
+// Header
+.modern-header {
+  background-color: $surface;
+
+  .navbar {
+    display: flex;
+    margin: auto;
+    padding: 1.2rem 2rem;
+    width: clamp(630px, 100vw, 630px);
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar__logo {
+      color: $text-color;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        color: $hover-color;
+      }
+    }
+
+    .navbar__container {
+      display: flex;
+      gap: 1rem;
+      &--links {
+        color: $text-color;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      &--links:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}
+
+// Main
+main {
+  width: clamp(630px, 100vw, 630px);
+  margin: auto;
+
+  hr {
+      border: 5px solid $hover-color;
+  }
+
+  // Section - About
+  .section__about {
+    display: flex;
+    margin: auto;
+    padding: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    &--profilePhoto {
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      position: relative;
+      top: 7px;
+    }
+    &--content {
+      .title {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: lighter;
+        text-transform: uppercase;
+      }
+      .names {
+        margin: -1.5rem 0 1rem;
+      }
+      p {
+        line-height: 1.5;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+  }
+
+  .section__title {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+  }
+
+  // Section - Projects
+  .project__list {
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 1rem;
+
+    &--link {
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      padding: 5rem 0;
+      width: 11rem;
+      color: $text-color;
+      background-color: $surface;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.4s ease;
+
+      @include dark-hover-color($hover-color, 30%);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  // Section - Compétences
+  .skills__list ul {
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 1rem;
+
+    .skill__item {
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      padding: 5rem 0;
+      width: 11rem;
+      background-color: $surface;
+      text-align: center;
+      list-style: none;
+      border-radius: 5px;
+      color: var(--text-color);
+      transition: all 0.4s ease;
+
+      @include dark-hover-color($hover-color, 30%);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  // Section - Contact
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto;
+
+    input,
+    textarea {
+      padding: 0.8rem;
+      background-color: $text-color;
+      color: $bg;
+      font-size: 1rem;
+      font-family: $font-main;
+      border: 1px solid $hover-color;
+      border-radius: 5px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 0.8rem;
+      background-color: $primary;
+      color: $text-color;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+
+      @include dark-hover-color($hover-color, 30%);
+    }
+  }
+}
+
+// Footer
+footer {
+  margin-top: 3rem;
+  background-color: var(--surface);
+
+  .footer__container {
+    margin: auto;
+    padding: 0.5rem 0;
+    width: clamp(630px, 100vw, 630px);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}

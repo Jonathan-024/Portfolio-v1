@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jonathan Museme">
+
+    <title>Jonathan.com - Accueil</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="modern-header container-fluid">
+      <nav class="navbar">
+        <a href="index.html" class="navbar__logo">Jonathan.com</a>
+        <div class="navbar__container">
+          <a href="#projets" class="navbar__container--links">Projets</a>
+          <a href="#competences" class="navbar__container--links">Compétences</a>
+          <a href="#contact" class="navbar__container--links">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section__about">
+        <img src="img/photo-de-jonathan.jpg" alt="Photo de Jonathan" class="section__about--profilePhoto">
+        
+        <div class="section__about--content">
+          <h1 class="title">Développer Web & Mobile</h1>
+          <h2 class="names">Jonathan Museme</h2>
+
+          <p class="profile">
+            Je suis un développeur spécialisé dans la création de sites web 
+            et d'applications mobiles modernes et rapides.
+          </p>
+        </div>
+      </section>
+
+      <hr>
+
+      <section id="projets" class="section__projects">
+        <h2 class="section__title">Projets</h2>
+        <div class="project__list">
+          <a href="https://jonathan-024.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" class="project__list--link">
+            PORTFOLIO
+          </a>
+          <a href="#" class="project__list--link">
+            OTHER
+          </a>
+          <a href="#" class="project__list--link">
+            OTHER
+          </a>
+        </div>
+      </section>
+
+      <section id="competences" class="section__competences">
+        <h2 class="section__title">Compétences</h2>
+        <div class="skills__list">
+          <ul>
+            <li class="skill__item">HTML</li>
+            <li class="skill__item">SCSS</li>
+            <li class="skill__item">GITHUB</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section__contact">
+        <h2 class="section__title">Contact</h2>
+        <form action="GET" method="POST" class="contact__form">
+          <input type="text" name="name" placeholder="Votre nom" data-lang-placeholder="name" required />
+          <input type="email" name="email" placeholder="Votre email" data-lang-placeholder="email" required />
+          <textarea name="message" placeholder="Votre message" data-lang-placeholder="message" required></textarea>
+          <button type="submit" data-lang="send">Envoyer</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer__container">
+        <p>&copy; 2026 Jonathan Museme. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
