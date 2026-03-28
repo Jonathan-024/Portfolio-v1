@@ -207,6 +207,24 @@ main {
   }
 }
 
+.form__message {
+  display: none;
+  margin: 1.1rem auto 0;
+  padding: 0.8rem;
+  background-color: $surface;
+  font-size: 0.9rem;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.form__message.show {
+  display: block;
+  opacity: 1;
+}
+
 // Footer
 footer {
   margin-top: 3rem;
