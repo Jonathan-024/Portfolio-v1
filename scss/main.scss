@@ -256,10 +256,10 @@ footer {
 
   .footer__copy {
     margin: auto;
-    padding: 1px 0;
+    padding: 0.1rem;
     font-size: 0.7rem;
     text-align: center;
 
-    @include dark-surface($surface, 2%);
+    @include dark-surface($hover-color, 60%);
   }
 }
